@@ -29,7 +29,7 @@
             bindings = <
 &kp LALT   &kp Q  &kp L  &kp U      &kp MINUS    &kp EQUAL  &kp F        &kp W            &kp R    &kp Y  &kp P  &kp ESC
 &kp TAB    &kp E  &kp I  &kp A      &kp O        &kp DOT    &kp K        &kp T            &kp N    &kp S  &kp H  &kp LGUI
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V        &kp DOT    &kp G        &kp D            &kp M    &kp J  &kp B  &kp RET
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V        &kp COMMA  &kp G        &kp D            &kp M    &kp J  &kp B  &kp RET
                          &kp LCTRL  &lt 2 SPACE  &mo 1      &lt 2 ENTER  &lt 1 BACKSPACE  &kp DEL
             >;
         };
