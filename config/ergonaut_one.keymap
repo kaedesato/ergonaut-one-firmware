@@ -27,30 +27,30 @@
         default_layer {
             display-name = "MAIN";
             bindings = <
-&kp LALT   &kp Q  &kp L  &kp U      &kp MINUS    &kp EQUAL  &kp F        &kp W            &kp R    &kp Y  &kp P  &kp ESC
-&kp TAB    &kp E  &kp I  &kp A      &kp O        &kp DOT    &kp K        &kp T            &kp N    &kp S  &kp H  &kp LGUI
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V        &kp COMMA  &kp G        &kp D            &kp M    &kp J  &kp B  &kp RET
-                         &kp LCTRL  &lt 2 SPACE  &mo 1      &lt 2 ENTER  &lt 1 BACKSPACE  &kp DEL
+&kp LALT       &kp Q  &kp L  &kp U      &kp MINUS    &kp EQUAL  &kp F        &kp W            &kp R    &kp Y  &kp P  &kp ESC
+&kp TAB        &kp E  &kp I  &kp A      &kp O        &kp DOT    &kp K        &kp T            &kp N    &kp S  &kp H  &kp LGUI
+&mt LSHFT TAB  &kp Z  &kp X  &kp C      &kp V        &kp COMMA  &kp G        &kp D            &kp M    &kp J  &kp B  &mt RIGHT_SHIFT RET
+                             &kp LCTRL  &lt 2 SPACE  &mo 1      &lt 2 ENTER  &lt 1 BACKSPACE  &kp DEL
             >;
         };
 
         lower_layer {
             display-name = "SYM";
             bindings = <
-&trans  &trans       &kp AT         &kp POUND     &kp LS(DLLR)  &kp F6  &trans     &kp N7        &kp N8  &kp N9  &trans        &trans
-&trans  &kp PERCENT  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &trans  &kp COLON  &kp N4        &kp N5  &kp N6  &kp EXCL      &trans
-&trans  &trans       &trans         &trans        &trans        &trans  &trans     &kp N1        &kp N2  &kp N3  &kp QUESTION  &trans
-                                    &trans        &trans        &trans  &trans     &kp NUMBER_0  &trans
+&trans  &trans       &kp AT     &kp POUND  &kp DOLLAR    &trans    &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH  &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
+&trans  &trans       &trans     &trans     &trans        &trans    &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                &trans     &trans        &trans    &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
         raise_layer {
             display-name = "NUM";
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp C_VOL_UP  &kp HOME  &kp UP    &kp PG_UP  &kp SLCK         &kp CLCK
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp C_MUTE    &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp C_VOL_DN  &kp END   &kp DOWN  &kp PG_DN  &kp PAUSE_BREAK  &kp RALT
-                         &trans   &trans   &trans  &trans        &trans    &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &trans    &kp HOME        &kp UP                &kp END                &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &trans    &kp LEFT        &kp DOWN              &kp RIGHT              &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp LBKT  &kp RBKT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
+                         &trans   &trans   &trans  &trans    &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
         };
 
