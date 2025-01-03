@@ -37,10 +37,10 @@
         lower_layer {
             display-name = "SYM";
             bindings = <
-&trans  &trans       &kp AT     &kp POUND  &kp DOLLAR    &trans    &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
-&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH  &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
-&trans  &trans       &trans     &trans     &trans        &trans    &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
-                                &trans     &trans        &trans    &trans     &kp NUMBER_0  &kp DOT
+&trans         &trans       &kp AT     &kp POUND  &kp DOLLAR    &trans    &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans         &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH  &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
+&kp LS(SPACE)  &trans       &trans     &trans     &kp LG(V)     &trans    &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                       &trans     &trans        &trans    &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
@@ -57,9 +57,9 @@
         adjust_layer {
             display-name = "ADJ";
             bindings = <
-&bootloader  &studio_unlock  &none         &none         &none         &tog 4        &none         &none         &none         &none         &studio_unlock  &bootloader
-&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
-&sys_reset   &none           &none         &none         &none         &none         &none         &none         &none         &none         &none           &sys_reset
+&bootloader  &studio_unlock  &none         &none         &none         &tog 4        &kp CAPS      &kp KP_NLCK   &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
+&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
+&sys_reset   &none           &none         &none         &none         &none         &none         &none         &none           &none         &none           &sys_reset
                                            &trans        &none         &trans        &none         &trans        &trans
             >;
         };
