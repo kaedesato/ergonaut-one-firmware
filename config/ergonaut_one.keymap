@@ -21,6 +21,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        prtscr {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <15 16>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -37,20 +47,20 @@
         lower_layer {
             display-name = "SYM";
             bindings = <
-&trans         &trans       &kp AT     &kp POUND  &kp DOLLAR    &trans    &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
-&trans         &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH  &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
-&kp LS(SPACE)  &trans       &trans     &trans     &kp LG(V)     &trans    &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
-                                       &trans     &trans        &trans    &trans     &kp NUMBER_0  &kp DOT
+&trans         &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE     &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans         &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
+&kp LC(SPACE)  &none        &none      &none      &kp LG(V)     &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                       &trans     &trans        &trans         &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
         raise_layer {
             display-name = "NUM";
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &trans    &kp HOME        &kp UP                &kp END                &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &trans    &kp LEFT        &kp DOWN              &kp RIGHT              &trans  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp LBKT  &kp RBKT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-                         &trans   &trans   &trans  &trans    &kp LEFT_BRACE  &kp RIGHT_BRACE
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp PRINTSCREEN    &kp HOME          &kp UP             &kp END               &none                  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp DOUBLE_QUOTES  &kp LEFT          &kp DOWN           &kp RIGHT             &none                  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp SINGLE_QUOTE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+                         &trans   &trans   &trans  &trans             &kp LEFT_BRACE    &kp RIGHT_BRACE
             >;
         };
 
