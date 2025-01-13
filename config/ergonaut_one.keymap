@@ -16,8 +16,8 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -30,7 +30,17 @@
 &mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
 &kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
 &kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 2      &mo 3  &kp BACKSPACE  &mt RCTRL DEL
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 3      &mo 4  &kp BACKSPACE  &mt RCTRL DEL
+            >;
+        };
+
+        layer_5 {
+            display-name = "Main";
+            bindings = <
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 3      &mo 4  &kp BACKSPACE  &mt RCTRL DEL
             >;
         };
 
@@ -40,7 +50,7 @@
 &mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
 &kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
 &kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 2      &mo 3  &kp BACKSPACE  &mt RCTRL DEL
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 3      &mo 4  &kp BACKSPACE  &mt RCTRL DEL
             >;
         };
 
@@ -67,7 +77,7 @@
         Config {
             display-name = "Conflg";
             bindings = <
-&bootloader  &studio_unlock  &none         &none         &none         &tog 1        &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
+&bootloader  &studio_unlock  &none         &none         &none         &tog 2        &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
 &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
 &sys_reset   &none           &none         &none         &none         &none         &none         &none           &none           &none         &none           &sys_reset
                                            &trans        &none         &trans        &none         &trans          &trans
