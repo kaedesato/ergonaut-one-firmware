@@ -16,8 +16,8 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
@@ -27,20 +27,30 @@
         Main {
             display-name = "Main";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R    &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N    &kp S  &kp H  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M    &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 1      &mo 2  &kp BACKSPACE  &kp DEL
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 2      &mo 3  &kp BACKSPACE  &mt RCTRL DEL
+            >;
+        };
+
+        Colemak {
+            display-name = "Colemak";
+            bindings = <
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 2      &mo 3  &kp BACKSPACE  &mt RCTRL DEL
             >;
         };
 
         Left {
             display-name = "Left";
             bindings = <
-&trans  &trans       &kp AT     &kp POUND  &kp DOLLAR    &trans    &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
-&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH  &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
-&trans  &trans       &trans     &trans     &trans        &trans    &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
-                                &trans     &trans        &trans    &trans     &kp NUMBER_0  &kp DOT
+&trans  &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE     &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
+&trans  &trans       &trans     &trans     &kp LG(V)     &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                &trans     &trans        &trans         &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
@@ -54,23 +64,13 @@
             >;
         };
 
-        adjust_layer {
-            display-name = "ADJ";
+        Config {
+            display-name = "Conflg";
             bindings = <
-&bootloader  &studio_unlock  &none         &none         &none         &tog 4        &none         &none         &none         &none         &studio_unlock  &bootloader
-&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
-&sys_reset   &none           &none         &none         &none         &none         &none         &none         &none         &none         &none           &sys_reset
-                                           &trans        &none         &trans        &none         &trans        &trans
-            >;
-        };
-
-        layer_4 {
-            display-name = "Colemak";
-            bindings = <
-&kp LALT       &kp Q  &kp W  &kp F      &kp P        &kp G  &kp J        &kp L            &kp U      &kp Y    &kp EQUAL  &kp ESC
-&kp TAB        &kp A  &kp R  &kp S      &kp T        &kp D  &kp H        &kp N            &kp E      &kp I    &kp O      &kp LGUI
-&mt LSHFT TAB  &kp Z  &kp X  &kp C      &kp V        &kp B  &kp K        &kp M            &kp COMMA  &kp DOT  &kp MINUS  &mt RIGHT_SHIFT RET
-                             &kp LCTRL  &lt 2 SPACE  &mo 1  &lt 2 ENTER  &lt 1 BACKSPACE  &kp DEL
+&bootloader  &studio_unlock  &none         &none         &none         &tog 1        &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
+&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
+&sys_reset   &none           &none         &none         &none         &none         &none         &none           &none           &none         &none           &sys_reset
+                                           &trans        &none         &trans        &none         &trans          &trans
             >;
         };
     };
