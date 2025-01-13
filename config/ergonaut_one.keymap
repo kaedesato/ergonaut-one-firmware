@@ -24,9 +24,14 @@
     combos {
         compatible = "zmk,combos";
 
-        prtscr {
+        PrintLeft {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <15 16>;
+        };
+
+        PrintRight {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <19 20>;
         };
     };
 
