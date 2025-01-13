@@ -24,18 +24,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "MAIN";
+        Main {
+            display-name = "Main";
             bindings = <
-&kp LALT       &kp Q  &kp L  &kp U      &kp MINUS    &kp EQUAL  &kp F        &kp W            &kp R    &kp Y  &kp P  &kp ESC
-&kp TAB        &kp E  &kp I  &kp A      &kp O        &kp DOT    &kp K        &kp T            &kp N    &kp S  &kp H  &kp LGUI
-&mt LSHFT TAB  &kp Z  &kp X  &kp C      &kp V        &kp COMMA  &kp G        &kp D            &kp M    &kp J  &kp B  &mt RIGHT_SHIFT RET
-                             &kp LCTRL  &lt 2 SPACE  &mo 1      &lt 2 ENTER  &lt 1 BACKSPACE  &kp DEL
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R    &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N    &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M    &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 1      &mo 2  &kp BACKSPACE  &kp DEL
             >;
         };
 
-        lower_layer {
-            display-name = "SYM";
+        Left {
+            display-name = "Left";
             bindings = <
 &trans  &trans       &kp AT     &kp POUND  &kp DOLLAR    &trans    &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
 &trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH  &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
@@ -44,8 +44,8 @@
             >;
         };
 
-        raise_layer {
-            display-name = "NUM";
+        Right {
+            display-name = "Right";
             bindings = <
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &trans    &kp HOME        &kp UP                &kp END                &trans  &trans
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &trans    &kp LEFT        &kp DOWN              &kp RIGHT              &trans  &trans
