@@ -16,8 +16,8 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -44,7 +44,26 @@
 &mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
 &kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
 &kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 1      &mo 2  &kp BACKSPACE  &mt RCTRL DEL
+                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 3      &mo 4  &kp BACKSPACE  &mt RCTRL DEL
+            >;
+        };
+
+        QWERTY {
+            display-name = "QWERTY";
+            bindings = <
+&mt LALT ESCAPE  &kp Q  &kp W  &kp E      &kp R      &kp T  &to 0  &none          &none          &kp O    &kp P      &kp ESC
+&kp TAB          &kp A  &kp S  &kp D      &kp F      &kp G  &none  &none          &kp K          &kp L    &kp MINUS  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp B  &kp N  &kp M          &kp COMMA      &kp DOT  &kp EQUAL  &mt RIGHT_SHIFT RET
+                               &kp LCTRL  &kp SPACE  &mo 3  &mo 4  &kp BACKSPACE  &mt RCTRL DEL
+            >;
+        };
+
+        onehand {
+            bindings = <
+&kp ESC    &trans    &kp UP    &trans     &trans     &trans               &to 0   &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &trans               &trans  &trans  &trans  &trans  &trans  &trans
+                               &kp LCTRL  &kp SPACE  &lt 3 LC(BACKSPACE)  &mo 4   &trans  &trans
             >;
         };
 
@@ -71,29 +90,10 @@
         Config {
             display-name = "Conflg";
             bindings = <
-&bootloader  &studio_unlock  &none         &none         &tog 5        &tog 4        &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
+&bootloader  &studio_unlock  &none         &none         &to 2         &to 1         &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
 &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
 &sys_reset   &none           &none         &none         &none         &none         &none         &none           &none           &none         &none           &sys_reset
                                            &trans        &none         &trans        &none         &trans          &trans
-            >;
-        };
-
-        QWERTY {
-            display-name = "QWERTY";
-            bindings = <
-&mt LALT ESCAPE  &kp Q  &kp W  &kp E                &kp R            &kp T  &kp Y  &kp U          &kp I          &kp O    &kp P      &kp ESC
-&kp TAB          &kp A  &kp S  &kp D                &kp F            &kp G  &kp H  &kp J          &kp K          &kp L    &kp MINUS  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp B  &kp N  &kp M          &kp COMMA      &kp DOT  &kp EQUAL  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 1  &mo 2  &kp BACKSPACE  &mt RCTRL DEL
-            >;
-        };
-
-        onehand {
-            bindings = <
-&kp ESC    &trans    &kp UP    &trans     &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &trans               &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp LCTRL  &kp SPACE  &lt 1 LC(BACKSPACE)  &mo 2   &trans  &trans
             >;
         };
     };
