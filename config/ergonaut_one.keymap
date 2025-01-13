@@ -60,10 +60,10 @@
 
         onehand {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC    &trans    &kp UP    &trans     &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &trans               &trans  &trans  &trans  &trans  &trans  &trans
+                               &kp LCTRL  &kp SPACE  &lt 3 LC(BACKSPACE)  &mo 4   &trans  &trans
             >;
         };
 
