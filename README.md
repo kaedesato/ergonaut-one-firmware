@@ -1,4 +1,4 @@
-# わたし用ショートカット
+# ショートカット
 
 [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 
