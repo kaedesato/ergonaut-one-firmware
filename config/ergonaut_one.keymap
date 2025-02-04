@@ -25,12 +25,12 @@
         compatible = "zmk,combos";
 
         PrintLeft {
-            bindings = <&kp PRINTSCREEN>;
+            bindings = <&kp INT_MUHENKAN>;
             key-positions = <15 16>;
         };
 
         PrintRight {
-            bindings = <&kp PRINTSCREEN>;
+            bindings = <&kp INT_HENKAN>;
             key-positions = <19 20>;
         };
     };
