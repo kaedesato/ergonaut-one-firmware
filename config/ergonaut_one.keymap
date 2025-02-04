@@ -24,12 +24,12 @@
     combos {
         compatible = "zmk,combos";
 
-        PrintLeft {
+        muhenkan {
             bindings = <&kp INT_MUHENKAN>;
             key-positions = <15 16>;
         };
 
-        PrintRight {
+        henkan {
             bindings = <&kp INT_HENKAN>;
             key-positions = <19 20>;
         };
