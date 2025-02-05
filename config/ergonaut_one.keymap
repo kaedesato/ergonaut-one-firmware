@@ -51,10 +51,10 @@
         Left {
             display-name = "Left";
             bindings = <
-&kp  &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE       &kp GRAVE      &kp        &kp N7        &kp N8   &kp N9  &kp           &kp
-&kp  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK    &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &kp LEFT_WIN
-&kp  &kp          &kp        &kp        &kp UNDERSCORE  &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &kp
-                             &kp AT     &kp UNDERSCORE  &kp            &kp        &kp NUMBER_0  &kp DOT
+&trans  &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE       &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK    &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &kp LEFT_WIN
+&trans  &trans       &trans     &trans     &trans          &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                &kp AT     &kp UNDERSCORE  &trans         &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
