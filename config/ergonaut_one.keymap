@@ -27,11 +27,13 @@
         PrintLeft {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <15 16>;
+            layers = <0>;
         };
 
         PrintRight {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <19 20>;
+            layers = <0>;
         };
     };
 
