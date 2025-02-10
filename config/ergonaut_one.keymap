@@ -51,10 +51,10 @@
         game {
             display-name = "game";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 4      &mo 5  &kp BACKSPACE  &mt RCTRL DEL
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U      &kp MINUS  &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A      &kp O      &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &kp LCTRL  &kp SPACE  &mo 4      &mo 5  &kp BACKSPACE  &mt RCTRL DEL
             >;
         };
 
