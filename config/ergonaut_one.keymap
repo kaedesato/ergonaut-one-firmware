@@ -16,8 +16,8 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <4 5>;
-            then-layer = <6>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -35,6 +35,11 @@
             key-positions = <19 20>;
             layers = <0>;
         };
+
+        hankaku-zenakaku {
+            bindings = <&kp LANG5>;
+            key-positions = <3 4>;
+        };
     };
 
     keymap {
@@ -43,58 +48,48 @@
         Main {
             display-name = "Main";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 4      &mo 5  &kp BACKSPACE  &mt RCTRL DEL
-            >;
-        };
-
-        game {
-            display-name = "game";
-            bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U      &kp MINUS  &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A      &kp O      &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &kp LCTRL  &kp SPACE  &mo 4      &mo 5  &kp BACKSPACE  &mt RCTRL DEL
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U            &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A            &mt LCTRL O      &kp DOT    &kp K  &mt RCTRL T    &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C            &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &mt LCTRL SLASH  &mt LCTRL SPACE  &mo 3      &mo 4  &kp BACKSPACE  &mt RCTRL DEL
             >;
         };
 
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp W  &kp E      &kp R      &kp T  &to 0  &none          &none          &kp O    &kp P      &kp ESC
-&kp TAB          &kp A  &kp S  &kp D      &kp F      &kp G  &none  &none          &kp K          &kp L    &kp MINUS  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp B  &kp N  &kp M          &kp COMMA      &kp DOT  &kp EQUAL  &mt RIGHT_SHIFT RET
-                               &kp LCTRL  &kp SPACE  &mo 4  &mo 5  &kp BACKSPACE  &mt RCTRL DEL
+&mt LALT ESCAPE  &kp Q  &kp W  &kp E      &kp R      &kp T  &to 0  &none          &none          &none  &none  &kp ESC
+&kp TAB          &kp A  &kp S  &kp D      &kp F      &kp G  &none  &none          &none          &none  &none  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp B  &none  &none          &none          &none  &none  &mt RIGHT_SHIFT RET
+                               &kp LCTRL  &kp SPACE  &mo 3  &mo 4  &kp BACKSPACE  &mt RCTRL DEL
             >;
         };
 
         onehand {
             bindings = <
-&kp ESC    &trans    &kp UP    &trans     &trans     &trans               &to 0   &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &trans               &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp LCTRL  &kp SPACE  &lt 4 LC(BACKSPACE)  &mo 5   &trans  &trans
+&kp ESC    &none  &none     &kp UP     &none            &none            &to 0  &kp INT2        &none           &none  &none  &none
+&kp TAB    &none  &kp LEFT  &kp DOWN   &kp RIGHT        &none            &none  &kp INT_HENKAN  &kp LANGUAGE_4  &none  &none  &none
+&kp LSHFT  &kp Z  &kp X     &kp C      &kp V            &none            &none  &kp INT5        &kp LANG3       &none  &none  &none
+                            &kp LCTRL  &mt LCTRL SPACE  &lt 3 BACKSPACE  &mo 4  &none           &none
             >;
         };
 
         Left {
             display-name = "Left";
             bindings = <
-&trans  &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE     &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
-&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
-&trans  &trans       &trans     &trans     &kp LG(V)     &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
-                                &trans     &trans        &trans         &trans     &kp NUMBER_0  &kp DOT
+&trans         &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE     &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans         &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
+&kp LC(SPACE)  &trans       &trans     &trans     &kp LG(V)     &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                       &trans     &trans        &trans         &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
         Right {
             display-name = "Right";
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp DOUBLE_QUOTES  &kp HOME        &kp UP                &kp END                &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp SQT            &kp LEFT        &kp DOWN              &kp RIGHT              &trans  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp LBKT           &kp RBKT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp DOUBLE_QUOTES  &kp HOME        &kp UP                &kp END                &kp PAGE_UP    &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp SQT            &kp LEFT        &kp DOWN              &kp RIGHT              &kp PAGE_DOWN  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp LBKT           &kp RBKT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans
                          &trans   &trans   &trans  &trans             &kp LEFT_BRACE  &kp RIGHT_BRACE
             >;
         };
@@ -102,7 +97,7 @@
         Config {
             display-name = "Conflg";
             bindings = <
-&bootloader  &studio_unlock  &none         &tog 3        &tog 2        &tog 1        &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
+&bootloader  &studio_unlock  &none         &to 2         &to 1         &none         &kp CAPS      &kp KP_NUMLOCK  &kp SCROLLLOCK  &none         &studio_unlock  &bootloader
 &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
 &sys_reset   &none           &none         &none         &none         &none         &none         &none           &none           &none         &none           &sys_reset
                                            &trans        &none         &trans        &none         &trans          &trans
