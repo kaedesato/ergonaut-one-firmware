@@ -37,8 +37,15 @@
         };
 
         hankaku-zenakaku {
-            bindings = <&kp LANG5>;
+            bindings = <&kp LANG1>;
             key-positions = <3 4>;
+            layers = <0>;
+        };
+
+        muhenkan {
+            bindings = <&kp LANG2>;
+            key-positions = <7 8>;
+            layers = <0>;
         };
     };
 
@@ -49,7 +56,7 @@
             display-name = "Main";
             bindings = <
 &mt LALT ESCAPE  &kp Q  &kp L  &kp U            &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A            &mt LCTRL O      &kp DOT    &kp K  &mt RCTRL T    &kp N          &kp S  &kp H  &kp LGUI
+&kp TAB          &kp E  &kp I  &kp A            &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LGUI
 &kp LSHFT        &kp Z  &kp X  &kp C            &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
                                &mt LCTRL SLASH  &mt LCTRL SPACE  &mo 3      &mo 4  &kp BACKSPACE  &mt RCTRL DEL
             >;
