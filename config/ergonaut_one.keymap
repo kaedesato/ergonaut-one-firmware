@@ -45,20 +45,20 @@
         Main {
             display-name = "Main";
             bindings = <
-&kp ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS        &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp DEL
-&kp TAB     &kp E  &kp I  &kp A                &kp O            &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LEFT_WIN
-&kp LSHFT   &kp Z  &kp X  &kp C                &kp V            &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RSHFT ENTER
-                          &mt LCTRL LC(SPACE)  &mt LCTRL SPACE  &mo 1      &mo 2  &kp BACKSPACE  &kp RIGHT_ALT
+&kp ESCAPE  &kp Q  &kp L  &kp U      &kp MINUS  &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp DEL
+&kp TAB     &kp E  &kp I  &kp A      &kp O      &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp LEFT_WIN
+&kp LSHFT   &kp Z  &kp X  &kp C      &kp V      &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &mt RSHFT ENTER
+                          &kp LCTRL  &kp SPACE  &mo 1      &mo 2  &kp BACKSPACE  &kp RIGHT_ALT
             >;
         };
 
         Left {
             display-name = "Left";
             bindings = <
-&trans  &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE     &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
-&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
-&trans  &trans       &trans     &trans     &trans        &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
-                                &trans     &trans        &trans         &trans     &kp NUMBER_0  &kp DOT
+&trans         &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE     &kp GRAVE      &kp PIPE   &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans         &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &trans
+&kp LC(SPACE)  &trans       &trans     &trans     &trans        &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                       &trans     &trans        &trans         &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
