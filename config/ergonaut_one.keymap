@@ -84,10 +84,10 @@
         Stenograph {
             display-name = "Main";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U            &kp MINUS               &kp EQUAL            &kp F            &kp W    &kp R                &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A            &kp O                   &kp DOT              &kp K            &kp T    &kp N                &kp S  &kp H  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C            &kp V                   &kp COMMA            &kp G            &kp D    &kp M                &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &mt LCTRL SPACE  &mt LCTRL LEFT_BRACKET  &lt 4 RIGHT_BRACKET  &lt 5 SEMICOLON  &kp SQT  &mt RCTRL BACKSPACE
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U                   &kp MINUS                &kp EQUAL    &kp F            &kp W          &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A                   &kp O                    &kp DOT      &kp K            &kp T          &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C                   &kp V                    &kp COMMA    &kp G            &kp D          &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &mt LCTRL LEFT_BRACKET  &mt LCTRL RIGHT_BRACKET  &lt 4 SPACE  &lt 5 BACKSPACE  &kp SEMICOLON  &mt RCTRL SQT
             >;
         };
 
