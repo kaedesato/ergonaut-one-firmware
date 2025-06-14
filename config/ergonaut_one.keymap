@@ -7,9 +7,16 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick-tap-ms = <200>; };
+&lt {
+    quick-tap-ms = <200>;
+    tapping-term-ms = <250>;
+};
 
-&mt { quick-tap-ms = <180>; };
+&mt {
+    quick-tap-ms = <180>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <250>;
+};
 
 / {
     conditional_layers {
@@ -84,10 +91,10 @@
         Stenograph {
             display-name = "Main";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U     &kp MINUS  &kp EQUAL    &kp F            &kp W     &kp R     &kp Y  &kp P  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A     &kp O      &kp DOT      &kp K            &kp T     &kp N     &kp S  &kp H  &kp LGUI
-&kp LSHFT        &kp Z  &kp X  &kp C     &kp V      &kp COMMA    &kp G            &kp D     &kp M     &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &kp LBKT  &kp RBKT   &lt 4 SPACE  &lt 5 BACKSPACE  &kp SEMI  &kp APOS
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U     &kp MINUS         &kp EQUAL            &kp F      &kp W     &kp R          &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A     &kp O             &kp DOT              &kp K      &kp T     &kp N          &kp S  &kp H  &kp LGUI
+&kp LSHFT        &kp Z  &kp X  &kp C     &kp V             &kp COMMA            &kp G      &kp D     &kp M          &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &kp LBKT  &kp LEFT_BRACKET  &lt 4 RIGHT_BRACKET  &lt 5 SQT  &kp SEMI  &kp BACKSPACE
             >;
         };
 
