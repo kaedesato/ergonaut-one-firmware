@@ -9,13 +9,15 @@
 
 &lt {
     quick-tap-ms = <200>;
-    tapping-term-ms = <250>;
+    tapping-term-ms = <400>;
+    require-prior-idle-ms = <150>;
 };
 
 &mt {
-    quick-tap-ms = <180>;
+    quick-tap-ms = <200>;
     flavor = "tap-preferred";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <400>;
+    require-prior-idle-ms = <150>;
 };
 
 / {
