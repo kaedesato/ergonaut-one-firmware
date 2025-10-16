@@ -8,15 +8,9 @@
 #define ADJ 3
 
 &lt {
-    quick-tap-ms = <200>;
-    tapping-term-ms = <250>;
 };
 
-&mt {
-    quick-tap-ms = <200>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <250>;
-};
+&mt { flavor = "tap-preferred"; };
 
 / {
     conditional_layers {
@@ -33,25 +27,13 @@
 
         PrintLeft {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <16 4>;
+            key-positions = <5 17>;
             layers = <0>;
         };
 
         PrintRight {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <19 7>;
-            layers = <0>;
-        };
-
-        hankaku-zenakaku {
-            bindings = <&kp LANG1>;
-            key-positions = <3 15>;
-            layers = <0>;
-        };
-
-        muhenkan {
-            bindings = <&kp LANG2>;
-            key-positions = <8 20>;
+            key-positions = <6 18>;
             layers = <0>;
         };
     };
@@ -91,10 +73,10 @@
         Stenograph {
             display-name = "Main";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U     &kp MINUS  &kp EQUAL         &kp F            &kp W     &kp R     &kp Y  &kp LGUI  &kp ESC
-&kp TAB          &kp E  &kp I  &kp A     &kp O      &mt LCTRL PERIOD  &mt RCTRL K      &kp T     &kp N     &kp S  &kp H     &kp P
-&kp LSHFT        &kp Z  &kp X  &kp C     &kp V      &kp COMMA         &kp G            &kp D     &kp M     &kp J  &kp B     &kp ENTER
-                               &kp LBKT  &kp RBKT   &lt 4 SPACE       &lt 5 BACKSPACE  &kp SEMI  &kp APOS
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U      &kp MINUS  &kp EQUAL        &kp F        &kp W          &kp R       &kp Y  &kp P  &kp ESC
+&kp TAB          &kp E  &kp I  &kp A      &kp O      &kp PERIOD       &kp K        &kp T          &kp N       &kp S  &kp H  &kp SINGLE_QUOTE
+&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &mt LCTRL COMMA  &mt RCTRL G  &kp D          &kp M       &kp J  &kp B  &kp ENTER
+                               &kp SLASH  &kp SPACE  &lt 4 SPACE      &lt 5 ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
 
