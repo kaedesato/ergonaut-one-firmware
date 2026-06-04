@@ -7,6 +7,29 @@
 #define RSE 2
 #define ADJ 3
 
+// Symbol keycodes for Windows with the OS layout set to Japanese.
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_BACKSLASH    0x87              // backslash, INT_RO position
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_YEN          0x89              // yen, INT_YEN position
+#define JP_PIPE         LS(0x89)          // |
+
 &lt { quick-tap-ms = <200>; };
 
 &mt { quick-tap-ms = <200>; };
@@ -41,30 +64,30 @@
         Main {
             display-name = "Main";
             bindings = <
-&kp ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS  &kp EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp DEL
-&kp TAB     &kp E  &kp I  &kp A                &kp O      &kp DOT    &kp K  &kp T          &kp N          &kp S  &kp H  &kp ENTER
-&kp LSHFT   &kp Z  &kp X  &kp C                &kp V      &kp COMMA  &kp G  &kp D          &kp M          &kp J  &kp B  &kp RSHFT
-                          &mt LCTRL LC(SPACE)  &kp SPACE  &mo 1      &mo 2  &kp BACKSPACE  &kp RIGHT_ALT
+&kp ESCAPE  &kp Q  &kp L  &kp U                &kp MINUS  &kp JP_EQUAL  &kp F  &kp W          &kp R          &kp Y  &kp P  &kp DEL
+&kp TAB     &kp E  &kp I  &kp A                &kp O      &kp DOT       &kp K  &kp T          &kp N          &kp S  &kp H  &kp ENTER
+&kp LSHFT   &kp Z  &kp X  &kp C                &kp V      &kp COMMA     &kp G  &kp D          &kp M          &kp J  &kp B  &kp RSHFT
+                          &mt LCTRL LC(SPACE)  &kp SPACE  &mo 1         &mo 2  &kp BACKSPACE  &kp RIGHT_ALT
             >;
         };
 
         Left {
             display-name = "Left";
             bindings = <
-&trans  &kp DOLLAR   &kp AT     &kp POUND  &kp TILDE       &kp GRAVE      &trans     &kp N7        &kp N8   &kp N9  &trans        &trans
-&trans  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK    &kp FSLH       &kp COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &kp LEFT_WIN
-&trans  &trans       &trans     &trans     &trans          &kp BACKSLASH  &kp SEMI   &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
-                                &kp AT     &kp UNDERSCORE  &trans         &trans     &kp NUMBER_0  &kp DOT
+&trans  &kp DOLLAR   &kp JP_AT     &kp POUND  &kp JP_TILDE       &kp JP_BACKQUOTE  &trans        &kp N7        &kp N8   &kp N9  &trans        &trans
+&trans  &kp PERCENT  &kp JP_CARET  &kp JP_AMPERSAND  &kp JP_ASTERISK    &kp FSLH          &kp JP_COLON  &kp N4        &kp N5   &kp N6  &kp EXCL      &kp LEFT_WIN
+&trans  &trans       &trans        &trans     &trans              &kp JP_BACKSLASH   &kp SEMI      &kp N1        &kp N2   &kp N3  &kp QUESTION  &trans
+                                             &kp JP_AT            &kp JP_UNDERSCORE  &trans        &trans     &kp NUMBER_0  &kp DOT
             >;
         };
 
         Right {
             display-name = "Right";
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp DOUBLE_QUOTES  &kp HOME        &kp UP                &kp END                &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp SQT            &kp LEFT        &kp DOWN              &kp RIGHT              &trans  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp LBKT           &kp RBKT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-                         &trans   &trans   &trans  &trans             &kp LEFT_BRACE  &kp RIGHT_BRACE
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none   &kp JP_DQUOTE    &kp HOME        &kp UP        &kp END       &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none   &kp JP_QUOTE     &kp LEFT        &kp DOWN      &kp RIGHT     &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp JP_LBRACKET  &kp JP_RBRACKET &kp JP_LPAREN &kp JP_RPAREN &trans  &trans
+                         &trans   &trans   &trans  &trans           &kp JP_LBRACE   &kp JP_RBRACE
             >;
         };
 
