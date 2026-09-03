@@ -7,10 +7,12 @@
 #define RSE 2
 #define ADJ 3
 
-&lt {
-};
+&lt { quick-tap-ms = <150>; };
 
-&mt { flavor = "tap-preferred"; };
+&mt {
+    flavor = "tap-preferred";
+    quick-tap-ms = <150>;
+};
 
 / {
     conditional_layers {
@@ -44,10 +46,10 @@
         Main {
             display-name = "Main";
             bindings = <
-&mt LALT ESCAPE  &kp Q  &kp L  &kp U     &kp MINUS  &kp EQUAL        &kp F            &kp W             &kp R     &kp Y  &kp P  &kp SEMI
-&kp TAB          &kp E  &kp I  &kp A     &kp O      &kp DOT          &kp K            &kp T             &kp N     &kp S  &kp H  &kp APOS
-&kp LSHFT        &kp Z  &kp X  &kp C     &kp V      &mt LCTRL COMMA  &mt RCTRL G      &kp D             &kp M     &kp J  &kp B  &mt RIGHT_SHIFT RET
-                               &kp BSLH  &kp FSLH   &lt 3 SPACE      &lt 4 BACKSPACE  &kp LEFT_BRACKET  &kp RBKT
+&mt LALT ESCAPE  &kp Q  &kp L  &kp U  &kp MINUS  &kp EQUAL        &kp F            &kp W  &kp R  &kp Y  &kp P  &kp J
+&kp TAB          &kp E  &kp I  &kp A  &kp O      &kp DOT          &kp K            &kp T  &kp N  &kp S  &kp H  &kp B
+&kp LSHFT        &kp Z  &kp X  &kp C  &kp V      &mt LCTRL COMMA  &mt RCTRL G      &kp D  &kp M  &kp J  &kp B  &mt RIGHT_SHIFT RET
+                               &kp C  &kp V      &lt 3 SPACE      &lt 4 BACKSPACE  &kp D  &kp M
             >;
         };
 
